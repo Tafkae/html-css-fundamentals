@@ -3,19 +3,20 @@
     --color-brand-contrast: #fff;
     --color-medium-gray: #898989;
     --color-light-gray: #ccc;
-    --color-background: #E5E5E5;
-    --font-body: 'Segoe UI', Arial, Helvetica, sans-serif;
-}
-
-body, html {
-    margin: 0;
-    padding: 0;
-    font-family: var(--font-body);
-    background-color: var(--color-background);
+    --color-background: #e5e5e5;
+    --font-body: "Segoe UI", Arial, Helvetica, sans-serif;
 }
 
 header {
     background-color: var(--color-brand-primary);
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    font-family: var(--font-body);
+    background-color: var(--color-background);
 }
 
 nav ul {
@@ -26,12 +27,12 @@ nav ul {
 nav > ul > li {
     display: inline-block;
     list-style: none;
-    margin: 0 1.5em 0 1.5em;
+    margin: 0 1.5em;
     vertical-align: middle;
 }
 
-nav > ul > li:first-child  {
-    margin: .5em;
+nav > ul > li:first-child {
+    margin: 0.5em;
     padding: 0;
 }
 
@@ -55,7 +56,7 @@ article {
 }
 
 #calculator {
-    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
     border: solid 1px var(--color-medium-gray);
     border-radius: 1em;
     padding: 1.5em;
@@ -66,18 +67,7 @@ article {
 }
 
 #calculator h2 {
-    margin-top: 0;
-}
-
-#calculator div {
-    margin: .5em 0 .5em 0;
-}
-
-#calculator label {
-    display: inline-block;
-    font-weight: 600;
-    cursor: pointer;
-    width: 100px;
+    margin: 0.5em 0;
 }
 
 #calculator input {
@@ -110,7 +100,7 @@ footer address h2 {
     display: none;
 }
 
-@media (min-width:960px)  {
+@media (min-width: 960px) {
     main {
         display: flex;
         flex-direction: row-reverse;
@@ -118,8 +108,8 @@ footer address h2 {
 
     article, aside {
         display: block;
-        flex-basis: 0;
-        flex-shrink: 1;
+        flex-basis: 0;      /* no predefined size*/
+        flex-shrink: 1;     /* will shrink as much as it needs to */
         padding: 0.75rem;
     }
 
